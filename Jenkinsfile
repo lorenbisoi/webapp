@@ -1,5 +1,5 @@
 node{
    stage('SCM checkout'){
-      git 'https://github.com/lorenbisoi/webapp/new/master'
+      git 'https://github.com/lorenbisoi/webapp'
    }
 }
