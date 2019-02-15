@@ -9,7 +9,8 @@ node{
    }
    stage('deploy to tomcat'){
       sshagent(['Tomcat']) {
-         sh 'scp -o StrictHostKeyChecking=no target/*.war loren@172.17.0.2://usr/local/tomcat/webapps'
+         sh sshpass -p "lorenbisoi" 'scp -o StrictHostKeyChecking=no target/*.war loren@172.17.0.2://usr/local/tomcat/webapps'
+         
       }
    }
 }
